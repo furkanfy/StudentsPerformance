@@ -85,3 +85,7 @@ grid.fit(X_train, y_train)
 
 print("En iyi parametreler:", grid.best_params_)
 print("En iyi skor:", grid.best_score_)
+import joblib
+
+# Eğitilmiş GridSearchCV pipeline'ı kaydet
+joblib.dump(grid.best_estimator_, 'xgb_pipeline.pkl')
